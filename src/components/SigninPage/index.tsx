@@ -15,6 +15,7 @@ export default function SigninPage() {
         </S.WelcomeBack>
         <p>돌아오신걸 환영해요!</p>
       </S.SigninSection>
+      <S.SigninBox></S.SigninBox>
     </S.SigninLayout>
   );
 }
