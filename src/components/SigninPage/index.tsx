@@ -8,6 +8,12 @@ export default function SigninPage() {
         <Link to="/">
           <I.Back />
         </Link>
+        <S.WelcomeBack>
+          Welcome
+          <br />
+          Back!
+        </S.WelcomeBack>
+        <p>돌아오신걸 환영해요!</p>
       </S.SigninSection>
     </S.SigninLayout>
   );
