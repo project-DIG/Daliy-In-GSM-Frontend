@@ -17,6 +17,7 @@ export default function SigninPage() {
         <p>돌아오신걸 환영해요!</p>
       </S.SigninSection>
       <S.SigninBox>
+        <S.EmailText>@gsm.hs.kr</S.EmailText>
         <Input type="text" />
         <Input type="password" placeholder="비밀번호" />
         <span>

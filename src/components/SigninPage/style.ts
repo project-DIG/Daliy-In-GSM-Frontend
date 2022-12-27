@@ -45,6 +45,14 @@ export const SigninBox = styled.div`
   }
 `;
 
+export const EmailText = styled.p`
+  top: 112px;
+  left: 156px;
+  font-size: 18px;
+  color: #7e7e7e;
+  position: absolute;
+`;
+
 export const SignWrap = styled.div`
   display: flex;
   flex-direction: column;
