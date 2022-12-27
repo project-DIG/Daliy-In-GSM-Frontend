@@ -14,6 +14,8 @@ export const StyledLayout = styled.div`
   ::-webkit-scrollbar {
     display: none;
   }
+
+  overflow-y: scroll;
 `;
 
 export const BackGroundImage = styled.img`
