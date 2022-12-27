@@ -62,6 +62,13 @@ export const Check = styled.button`
   font-style: normal;
   font-weight: 400;
   font-size: 17px;
+  &:hover {
+    background-color: white;
+    color: #7e9ce8;
+    transition: 0.7s;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 0 #7e9ce8;
+  }
 `;
 
 export const AuthenticationBox = styled.div`
