@@ -10,8 +10,14 @@ export const SignupSection = styled.section`
   width: 360px;
   height: 80%;
   margin: auto;
-  p {
-    color: #7e7e7e;
-    font-weight: 600;
-  }
+`;
+export const LetsStart = styled.div`
+  font-family: 'Changa One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 46px;
+  line-height: 53px;
+  color: #6c8ee5;
+  margin-top: 64px;
+  margin-bottom: 30px;
 `;

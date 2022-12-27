@@ -8,6 +8,11 @@ export default function SignupPage() {
         <Link to="/">
           <I.Back />
         </Link>
+        <S.LetsStart>
+          Let's
+          <br />
+          Start!
+        </S.LetsStart>
       </S.SignupSection>
     </S.SignupLayout>
   );
