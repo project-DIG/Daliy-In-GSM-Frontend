@@ -18,8 +18,8 @@ export const LetsStart = styled.div`
   font-size: 46px;
   line-height: 53px;
   color: #6c8ee5;
-  margin-top: 64px;
-  margin-bottom: 60px;
+  margin-top: 44px;
+  margin-bottom: 40px;
 `;
 
 export const EmailText = styled.p`
@@ -39,10 +39,13 @@ export const Input = styled.input`
   margin-bottom: 20px;
   font-family: 'IBM Plex Sans KR';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   &:focus {
     border-color: #375dbb;
     outline: #375dbb;
+  }
+  &::placeholder {
+    text-align: center;
   }
 `;
 
@@ -54,10 +57,42 @@ export const Check = styled.button`
   background-color: #9fb6ee;
   outline: 2px Solid #7e9ce8;
   border: none;
+  color: white;
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
 `;
 
 export const AuthenticationBox = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+`;
+
+export const SignBox = styled.div`
+  width: 360px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 20px;
+`;
+export const SignWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 700;
+`;
+
+export const Signup = styled.p`
+  font-size: 26px;
+  letter-spacing: -0.1em;
+`;
+export const Signin = styled.p`
+  font-size: 15px;
+  color: #8a8a8a;
+  margin-top: 60px;
+  margin-left: 2px;
 `;

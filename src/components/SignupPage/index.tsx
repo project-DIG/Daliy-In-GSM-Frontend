@@ -25,6 +25,13 @@ export default function SignupPage() {
             <S.Check>확인</S.Check>
           </S.AuthenticationBox>
         </span>
+        <S.SignBox>
+          <S.SignWrap>
+            <S.Signup>회원가입</S.Signup>
+            <S.Signin>로그인</S.Signin>
+          </S.SignWrap>
+          <I.LoginButton />
+        </S.SignBox>
       </S.SignupSection>
     </S.SignupLayout>
   );
