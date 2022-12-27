@@ -10,7 +10,7 @@ function UserPage() {
   const [loaded, setLoaded] = useState<boolean>(true);
   return (
     <S.UserPageLayout>
-      {loaded ? (
+      {!loaded ? (
         <Skeleton />
       ) : (
         <>
