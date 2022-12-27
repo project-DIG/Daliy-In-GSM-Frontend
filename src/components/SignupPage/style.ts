@@ -65,7 +65,7 @@ export const Check = styled.button`
   &:hover {
     background-color: white;
     color: #7e9ce8;
-    transition: 0.6s;
+    transition: 0.3s;
     transform: translateY(-4px);
     box-shadow: 0 4px 0 #7e9ce8;
   }
