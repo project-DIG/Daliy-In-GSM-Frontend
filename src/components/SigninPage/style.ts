@@ -57,17 +57,19 @@ export const SignWrap = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  font-family: 'Karla', sans-serif;
+  font-family: 'IBM Plex Sans KR';
   font-style: normal;
-  font-weight: 800;
+  font-weight: 700;
 `;
 
 export const Signin = styled.p`
-  font-size: 24px;
+  font-size: 26px;
+
+  letter-spacing: -0.1em;
 `;
 export const Signup = styled.p`
-  font-size: 14px;
-  color: #7a7a7a;
+  font-size: 15px;
+  color: #8a8a8a;
   margin-top: 70px;
-  margin-left: -10px;
+  margin-left: -4px;
 `;
