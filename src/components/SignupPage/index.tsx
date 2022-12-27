@@ -28,7 +28,9 @@ export default function SignupPage() {
         <S.SignBox>
           <S.SignWrap>
             <S.Signup>회원가입</S.Signup>
-            <S.Signin>로그인</S.Signin>
+            <Link to="/signin">
+              <S.Signin>로그인</S.Signin>
+            </Link>
           </S.SignWrap>
           <I.LoginButton />
         </S.SignBox>
