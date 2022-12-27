@@ -1,6 +1,7 @@
 import * as S from './style';
 import * as I from '../../assets/svg';
 import { Link } from 'react-router-dom';
+import Input from 'components/Common/Input';
 export default function SigninPage() {
   return (
     <S.SigninLayout>
@@ -15,7 +16,17 @@ export default function SigninPage() {
         </S.WelcomeBack>
         <p>돌아오신걸 환영해요!</p>
       </S.SigninSection>
-      <S.SigninBox></S.SigninBox>
+      <S.SigninBox>
+        <Input type="text" />
+        <Input type="password" placeholder="비밀번호" />
+        <span>
+          <S.SignWrap>
+            <S.Signin>로그인</S.Signin>
+            <S.Signup>회원가입</S.Signup>
+          </S.SignWrap>
+          <I.LoginButton />
+        </span>
+      </S.SigninBox>
     </S.SigninLayout>
   );
 }
