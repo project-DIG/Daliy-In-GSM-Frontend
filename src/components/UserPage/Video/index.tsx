@@ -12,21 +12,21 @@ function VideoSection() {
           onClick={() => setActiveIndex(0)}
           className={activeIndex === 0 ? 'active user' : ''}
         >
-          <I.User isActive={true} />
+          <I.User />
           <S.BottomLine />
         </S.Box>
         <S.Box
           onClick={() => setActiveIndex(1)}
           className={activeIndex === 1 ? 'active like' : ''}
         >
-          <I.Like isActive={true} />
+          <I.Like />
           <S.BottomLine />
         </S.Box>
         <S.Box
           onClick={() => setActiveIndex(2)}
           className={activeIndex === 2 ? 'active dislike' : ''}
         >
-          <I.DisLike isActive={true} />
+          <I.DisLike />
           <S.BottomLine />
         </S.Box>
       </S.Category>

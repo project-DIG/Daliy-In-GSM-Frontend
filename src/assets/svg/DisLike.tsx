@@ -1,6 +1,4 @@
-import { CategoryType } from 'types/category';
-
-export const DisLike = ({ isActive }: CategoryType) => {
+export const DisLike = () => {
   return (
     <svg
       width="41"

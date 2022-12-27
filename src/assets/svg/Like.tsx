@@ -1,6 +1,4 @@
-import { CategoryType } from 'types/category';
-
-export const Like = ({ isActive }: CategoryType) => {
+export const Like = () => {
   return (
     <svg
       width="40"
