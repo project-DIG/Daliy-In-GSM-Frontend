@@ -6,7 +6,7 @@ export const UserPageLayout = styled.div`
 `;
 
 export const FollowButton = styled.div`
-  width: 432px;
+  width: 86.4%;
   height: 40px;
   line-height: 40px;
   text-align: center;
@@ -21,11 +21,23 @@ export const FollowButton = styled.div`
   color: #d5b2e1;
   transition: 0.2s;
 
+  & > svg {
+    margin-top: 10px;
+  }
+
   :hover {
     border: 1.5px solid #d5b2e1;
     color: white;
     background-color: #d5b2e1;
 
     transition: 0.2s;
+
+    & > svg > * {
+      fill: #ffffff;
+    }
+  }
+
+  & > svg > * {
+    fill: #d5b2e1;
   }
 `;

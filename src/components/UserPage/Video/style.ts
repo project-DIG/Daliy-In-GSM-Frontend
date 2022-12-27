@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
 
-export const Category = styled.div`
+export const Category = styled.div<{ isMine: boolean }>`
   width: 88%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: ${e => (e.isMine ? 'space-between' : 'center')};
   margin-top: 45px;
   cursor: pointer;
 `;
@@ -65,4 +65,15 @@ export const VideoSection = styled.div`
   grid-template-columns: repeat(3, 1fr);
   margin-top: 30px;
   margin-bottom: 20px;
+`;
+
+export const VideoNotFound = styled.p`
+  width: 86.4%;
+  margin: auto;
+  margin-top: 100px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-style: normal;
+  text-align: center;
+  font-weight: 500;
+  font-size: 26px;
 `;

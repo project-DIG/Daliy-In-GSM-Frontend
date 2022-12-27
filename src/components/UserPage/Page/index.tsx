@@ -2,6 +2,7 @@ import { useState } from 'react';
 import UserInfoSection from '../UserInfo';
 import VideoSection from '../Video';
 import * as S from './style';
+import * as I from 'assets/svg';
 
 function UserPage() {
   const [isMine, setIsMine] = useState<boolean>(false);
@@ -9,7 +10,9 @@ function UserPage() {
     <S.UserPageLayout>
       <UserInfoSection />
       {isMine ? (
-        <S.FollowButton></S.FollowButton>
+        <S.FollowButton>
+          <I.EditProfile />
+        </S.FollowButton>
       ) : (
         <S.FollowButton>팔로우</S.FollowButton>
       )}
