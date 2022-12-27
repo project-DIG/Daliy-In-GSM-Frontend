@@ -65,9 +65,14 @@ export const Check = styled.button`
   &:hover {
     background-color: white;
     color: #7e9ce8;
-    transition: 0.7s;
+    transition: 0.6s;
     transform: translateY(-4px);
     box-shadow: 0 4px 0 #7e9ce8;
+  }
+  &:active {
+    transition: 0s;
+    transform: translateY(0);
+    box-shadow: inset 0 2px 2px #7e9ce8;
   }
 `;
 
