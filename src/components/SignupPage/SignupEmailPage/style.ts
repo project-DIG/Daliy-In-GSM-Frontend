@@ -36,7 +36,7 @@ export const EmailText = styled.p`
 export const Input = styled.input<{ isError: boolean }>`
   width: 162px;
   height: 60px;
-  border: 2px solid #9fb6ee;
+  border: ${e => (e.isError ? '2px solid #FF9090' : '2px solid #9fb6ee')};
   border-radius: 16px;
   font-size: 16px;
   text-align: center;

@@ -114,3 +114,8 @@ export const Signin = styled.p`
   margin-top: 60px;
   margin-left: 2px;
 `;
+
+export const ErrorMessage = styled.div`
+  margin: -16px 0 20px 4px;
+  color: #cc3636;
+`;

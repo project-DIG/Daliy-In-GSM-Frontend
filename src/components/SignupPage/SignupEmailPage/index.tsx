@@ -12,6 +12,7 @@ export default function SignupEmailPage() {
   const [isError, setIsError] = useState(false);
   const [authenticationMailInput, setAuthenticationMailInput] = useState('');
   const [email, setEmail] = useState('');
+  const [codeError, setCodeError] = useState(false);
   const [canLogin, setCanLogin] = useState(false);
 
   const onChangeAuthenticationMailInput = (
@@ -30,6 +31,7 @@ export default function SignupEmailPage() {
     } catch (error: any) {
       toast.error('인증번호를 다시 확인해주세요.', { autoClose: 2000 });
       setCanLogin(false);
+      setCodeError(true);
     }
   };
 
@@ -90,7 +92,7 @@ export default function SignupEmailPage() {
               onChange={onChangeAuthenticationMailInput}
               type="text"
               placeholder="인증번호"
-              isError={isError}
+              isError={codeError}
             />
             <S.Check
               onClick={() =>

@@ -3,3 +3,9 @@ export interface SigninInterface {
   password: string;
   email: string;
 }
+export interface SignupInterface {
+  nickname: string;
+  password: string;
+  checkPassword: string;
+  email: string;
+}
