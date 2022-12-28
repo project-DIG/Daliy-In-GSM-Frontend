@@ -5,7 +5,7 @@ export const getAuth = {
     return BASE_URL + 'signin/refresh';
   },
   confirmEmail: () => {
-    return BASE_URL + 'signin/email';
+    return BASE_URL + 'signup/email';
   },
 };
 
