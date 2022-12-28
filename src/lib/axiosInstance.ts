@@ -8,7 +8,7 @@ const AxiosInstance = (data: AxiosRequestConfig, token?: string) => {
       withCredentials: false,
       data: data.data,
       headers: {
-        Authorization: token ? 'Bearer ' + token : '',
+        Authorization: token ? 'Bearer ' + token : null,
       },
       params: data.params,
     });
