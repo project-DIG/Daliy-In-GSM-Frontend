@@ -15,6 +15,21 @@ class Auth {
       return error;
     }
   }
+
+  emailCheck(email: string, authenticationMail: string) {
+    try {
+      return AxiosInstance({
+        method: 'Post',
+        url: getAuth.confirmAuthenticationMail(),
+        data: {
+          email: email + '@gsm.hs.kr',
+          code: authenticationMail,
+        },
+      });
+    } catch (error) {
+      return error;
+    }
+  }
 }
 
 export default new Auth();
