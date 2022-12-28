@@ -1,4 +1,4 @@
-export const CantBack = () => {
+export const CantLogin = () => {
   return (
     <svg
       width="106"
