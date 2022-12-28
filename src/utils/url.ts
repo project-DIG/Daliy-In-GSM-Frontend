@@ -4,6 +4,9 @@ export const getAuth = {
   tokenReissuance: () => {
     return BASE_URL + 'signin/refresh';
   },
+  confirmEmail: () => {
+    return BASE_URL + 'signin/email';
+  },
 };
 
 export const getUser = {
