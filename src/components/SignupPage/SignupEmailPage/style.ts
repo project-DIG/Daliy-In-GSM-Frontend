@@ -11,7 +11,7 @@ export const SignupSection = styled.section`
   height: 80%;
   margin: auto;
 `;
-export const EmailForm = styled.form`
+export const EmailForm = styled.div`
   display: flex;
   flex-direction: column;
 `;
@@ -100,4 +100,36 @@ export const SignWrap = styled.div`
   font-family: 'IBM Plex Sans KR';
   font-style: normal;
   font-weight: 700;
+`;
+
+export const EmailBox = styled.form`
+  display: flex;
+`;
+
+export const EmailButton = styled.button`
+  cursor: pointer;
+  width: 170px;
+  height: 64px;
+  border-radius: 16px;
+  background-color: #9fb6ee;
+  outline: 2px Solid #7e9ce8;
+  border: none;
+  color: white;
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  margin-left: 20px;
+  &:hover {
+    background-color: white;
+    color: #7e9ce8;
+    transition: 0.3s;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 0 #7e9ce8;
+  }
+  &:active {
+    transition: 0s;
+    transform: translateY(0);
+    box-shadow: inset 0 2px 2px #7e9ce8;
+  }
 `;
