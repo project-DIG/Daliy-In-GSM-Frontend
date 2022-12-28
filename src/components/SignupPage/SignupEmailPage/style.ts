@@ -22,8 +22,8 @@ export const LetsStart = styled.div`
   font-size: 46px;
   line-height: 53px;
   color: #6c8ee5;
-  margin-top: 44px;
-  margin-bottom: 40px;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 `;
 
 export const EmailText = styled.p`
@@ -87,12 +87,11 @@ export const AuthenticationBox = styled.div`
 `;
 
 export const SignBox = styled.div`
-  width: 360px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  margin-top: 20px;
+  position: absolute;
+  bottom: 134px;
+  right: 70px;
 `;
+
 export const SignWrap = styled.div`
   display: flex;
   flex-direction: column;
