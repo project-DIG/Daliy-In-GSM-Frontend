@@ -5,3 +5,9 @@ export const getAuth = {
     return BASE_URL + 'signin/refresh';
   },
 };
+
+export const getUser = {
+  getUserInfo: () => {
+    return BASE_URL + 'user/';
+  },
+};
