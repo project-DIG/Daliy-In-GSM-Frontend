@@ -31,6 +31,7 @@ export default function SignupEmailPage() {
     } catch (error: any) {
       toast.error('인증번호를 다시 확인해주세요.', { autoClose: 2000 });
       console.log(error);
+      setCanLogin(false);
     }
   };
 
@@ -46,6 +47,7 @@ export default function SignupEmailPage() {
       console.log(res);
     } catch (error: any) {
       console.log(error.response.status);
+      setCanLogin(false);
       switch (error.response.status) {
         case 400:
           toast.error('진행중인 인증이 있습니다.', { autoClose: 2000 });
