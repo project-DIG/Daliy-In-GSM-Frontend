@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import React, { useState } from 'react';
 import Input from 'components/Common/Input';
 import auth from 'api/auth';
+import { toast } from 'react-toastify';
 
 export default function SignupEmailPage() {
   const { register, handleSubmit } = useForm();
@@ -25,21 +26,37 @@ export default function SignupEmailPage() {
       console.log(email, code);
       const res: any = await auth.emailCheck(email, code);
       setCanLogin(true);
+      toast.success('인증되었습니다!', { autoClose: 2000 });
       console.log('성공', res);
     } catch (error: any) {
+      toast.error('인증번호를 다시 확인해주세요.', { autoClose: 2000 });
       console.log(error);
     }
   };
 
   const onValid = async (data: any) => {
-    setIsError(false);
     try {
+      setIsError(false);
       console.log(data.email);
       setEmail(data.email);
       const res: any = await auth.getAuthenticationMail(data.email);
+      toast.success('인증코드를 보냈습니다!', {
+        autoClose: 2000,
+      });
       console.log(res);
     } catch (error: any) {
-      console.log(error);
+      console.log(error.response.status);
+      switch (error.response.status) {
+        case 400:
+          toast.error('진행중인 인증이 있습니다.', { autoClose: 2000 });
+          break;
+        case 409:
+          toast.error('이미 사용중인 이메일입니다.', { autoClose: 2000 });
+          break;
+        case 410:
+          toast.error('잘못된 이메일 형식입니다', { autoClose: 2000 });
+          break;
+      }
     }
   };
   const inValid = (error: any) => {
@@ -63,14 +80,6 @@ export default function SignupEmailPage() {
             <Input
               register={register('email', {
                 required: '이메일 입력해주세요.',
-                maxLength: {
-                  value: 6,
-                  message: '이메일은 6글자입니다.',
-                },
-                minLength: {
-                  value: 6,
-                  message: '이메일은 6글자입니다.',
-                },
               })}
               email={true}
               type="text"

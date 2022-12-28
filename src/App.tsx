@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { GlobalStyle } from 'shared/globalStyles';
 import SignupEmailPage from 'components/SignupPage/SignupEmailPage';
 import Signup from 'pages/Signup';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <GlobalStyle />
       <Layout>
         <BrowserRouter>
+          <ToastContainer />
           <Routes>
             <Route path="/" element={<Main />} />
             <Route path="/:user_name" element={<User />} />
