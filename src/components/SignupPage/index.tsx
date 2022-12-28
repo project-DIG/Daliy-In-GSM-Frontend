@@ -57,16 +57,18 @@ export default function SignupPage() {
             placeholder="비밀번호 확인"
             isError={isError}
           />
+          <S.SignBox>
+            <S.SignWrap>
+              <S.Signup>회원가입</S.Signup>
+              <Link to="/signin">
+                <S.Signin>로그인</S.Signin>
+              </Link>
+            </S.SignWrap>
+            <button>
+              <I.LoginButton />
+            </button>
+          </S.SignBox>
         </form>
-        <S.SignBox>
-          <S.SignWrap>
-            <S.Signup>회원가입</S.Signup>
-            <Link to="/signin">
-              <S.Signin>로그인</S.Signin>
-            </Link>
-          </S.SignWrap>
-          <I.LoginButton />
-        </S.SignBox>
       </S.SignupSection>
     </S.SignupLayout>
   );

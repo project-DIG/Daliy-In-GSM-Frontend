@@ -88,6 +88,12 @@ export const SignBox = styled.div`
   justify-content: space-between;
   margin: 0 auto;
   margin-top: 20px;
+  button {
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    height: 0px;
+  }
 `;
 export const SignWrap = styled.div`
   display: flex;
