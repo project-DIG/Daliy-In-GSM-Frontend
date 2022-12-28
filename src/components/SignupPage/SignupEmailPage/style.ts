@@ -11,6 +11,10 @@ export const SignupSection = styled.section`
   height: 80%;
   margin: auto;
 `;
+export const EmailForm = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
 export const LetsStart = styled.div`
   font-family: 'Changa One';
   font-style: normal;
@@ -96,15 +100,4 @@ export const SignWrap = styled.div`
   font-family: 'IBM Plex Sans KR';
   font-style: normal;
   font-weight: 700;
-`;
-
-export const Signup = styled.p`
-  font-size: 26px;
-  letter-spacing: -0.1em;
-`;
-export const Signin = styled.p`
-  font-size: 15px;
-  color: #8a8a8a;
-  margin-top: 60px;
-  margin-left: 2px;
 `;

@@ -10,8 +10,6 @@ export default function SignupEmailPage() {
   const [isError, setIsError] = useState(false);
   const onValid = (data: any) => {
     setIsError(false);
-    console.log(data);
-    console.log('hi');
   };
   const inValid = (error: any) => {
     setIsError(true);
