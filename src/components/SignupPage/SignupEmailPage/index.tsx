@@ -94,7 +94,15 @@ export default function SignupEmailPage() {
             </S.Check>
           </S.AuthenticationBox>
         </S.EmailForm>
-        <S.SignBox>{canLogin ? <I.LoginButton /> : <I.CantLogin />}</S.SignBox>
+        <S.SignBox>
+          {canLogin ? (
+            <Link to="/signup">
+              <I.LoginButton />
+            </Link>
+          ) : (
+            <I.CantLogin />
+          )}
+        </S.SignBox>
       </S.SignupSection>
     </S.SignupLayout>
   );
