@@ -37,18 +37,18 @@ export default function SignupPage() {
             placeholder="이름"
           />
           <Input
-            type="password"
-            placeholder="비밀번호"
             register={register('password', {
               required: '비밀번호를 입력해주세요.',
             })}
+            type="password"
+            placeholder="비밀번호"
           />
           <Input
-            type="password"
-            placeholder="비밀번호 확인"
             register={register('checkPassword', {
               required: '비밀번호를 확인해주세요.',
             })}
+            type="password"
+            placeholder="비밀번호 확인"
           />
           <S.EmailText>@gsm.hs.kr</S.EmailText>
           <Input
@@ -63,6 +63,7 @@ export default function SignupPage() {
                 message: '이메일은 6글자입니다.',
               },
             })}
+            email={true}
           />
           <S.AuthenticationBox>
             <S.Input type="text" placeholder="인증번호" />
