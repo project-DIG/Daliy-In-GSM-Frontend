@@ -20,7 +20,7 @@ export default function SignupEmailPage() {
   return (
     <S.SignupLayout>
       <S.SignupSection>
-        <Link to="/">
+        <Link to="/signin">
           <I.Back />
         </Link>
         <S.LetsStart>
@@ -28,25 +28,25 @@ export default function SignupEmailPage() {
           <br />
           Start!
         </S.LetsStart>
-        <form onSubmit={handleSubmit(onValid, inValid)}>
+        <S.EmailForm onSubmit={handleSubmit(onValid, inValid)}>
+          <S.EmailText>@gsm.hs.kr</S.EmailText>
+          <Input
+            register={register('email', {
+              required: '이메일 입력해주세요.',
+              maxLength: {
+                value: 6,
+                message: '이메일은 6글자입니다.',
+              },
+              minLength: {
+                value: 6,
+                message: '이메일은 6글자입니다.',
+              },
+            })}
+            email={true}
+            type="text"
+            isError={isError}
+          />
           <S.AuthenticationBox>
-            <S.EmailText>@gsm.hs.kr</S.EmailText>
-            <Input
-              register={register('email', {
-                required: '이메일 입력해주세요.',
-                maxLength: {
-                  value: 6,
-                  message: '이메일은 6글자입니다.',
-                },
-                minLength: {
-                  value: 6,
-                  message: '이메일은 6글자입니다.',
-                },
-              })}
-              email={true}
-              type="text"
-              isError={isError}
-            />
             <S.Input
               register={register('email', {
                 required: '인증메일을 확인해주세요',
@@ -65,14 +65,8 @@ export default function SignupEmailPage() {
             />
             <S.Check>확인</S.Check>
           </S.AuthenticationBox>
-        </form>
+        </S.EmailForm>
         <S.SignBox>
-          <S.SignWrap>
-            <S.Signup>회원가입</S.Signup>
-            <Link to="/signin">
-              <S.Signin>로그인</S.Signin>
-            </Link>
-          </S.SignWrap>
           <I.LoginButton />
         </S.SignBox>
       </S.SignupSection>

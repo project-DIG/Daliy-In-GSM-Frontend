@@ -23,7 +23,7 @@ export default function SigninPage() {
         <span>
           <S.SignWrap>
             <S.Signin>로그인</S.Signin>
-            <Link to="/signup">
+            <Link to="/signup_email">
               <S.Signup>회원가입</S.Signup>
             </Link>
           </S.SignWrap>
