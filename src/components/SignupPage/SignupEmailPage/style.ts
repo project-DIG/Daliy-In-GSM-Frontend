@@ -33,7 +33,7 @@ export const EmailText = styled.p`
   color: #7e7e7e;
   position: absolute;
 `;
-export const Input = styled.input<{ isError: boolean; register: any }>`
+export const Input = styled.input<{ isError: boolean }>`
   width: 126px;
   height: 60px;
   border: 2px solid #9fb6ee;

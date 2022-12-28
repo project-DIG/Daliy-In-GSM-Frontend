@@ -2,25 +2,30 @@ import * as S from './style';
 import * as I from '../../../assets/svg';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Input from 'components/Common/Input';
 import auth from 'api/auth';
 
 export default function SignupEmailPage() {
   const { register, handleSubmit } = useForm();
   const [isError, setIsError] = useState(false);
+  const [authenticationMailInput, setAuthenticationMailInput] = useState('');
 
-  const getAuthenticationMail = async (data: any) => {
-    setIsError(false);
+  const onChangeAuthenticationMailInput = (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    setAuthenticationMailInput(e.target.value);
+    console.log(authenticationMailInput);
+  };
+
+  const confirmAuthenticationMail = async (data: any) => {
     try {
       console.log(data.email);
-
-      const res: any = await auth.getAuthenticationMail(data.email);
-      console.log(res);
     } catch (error: any) {
       console.log(error);
     }
   };
+
   const onValid = async (data: any) => {
     setIsError(false);
     try {
@@ -70,22 +75,12 @@ export default function SignupEmailPage() {
           </S.EmailBox>
           <S.AuthenticationBox>
             <S.Input
-              register={register('email', {
-                required: '인증메일을 확인해주세요',
-                maxLength: {
-                  value: 6,
-                  message: '인증메일은 6글자 입니다',
-                },
-                minLength: {
-                  value: 6,
-                  message: '인증메일은 6글자 입니다',
-                },
-              })}
+              onChange={onChangeAuthenticationMailInput}
               type="text"
               placeholder="인증번호"
               isError={isError}
             />
-            <S.Check>확인</S.Check>
+            <S.Check onClick={confirmAuthenticationMail}>확인</S.Check>
           </S.AuthenticationBox>
         </S.EmailForm>
         <S.SignBox>
