@@ -1,5 +1,8 @@
 import * as S from './style';
-
-export default function Input({ ...rest }) {
-  return <S.Input {...rest} />;
+interface Props extends React.HTMLAttributes<HTMLInputElement> {
+  register?: any;
+  [x: string]: any;
+}
+export default function Input({ register, ...rest }: Props) {
+  return <S.Input {...rest} {...register} />;
 }
