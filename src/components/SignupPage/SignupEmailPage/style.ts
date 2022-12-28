@@ -34,13 +34,12 @@ export const EmailText = styled.p`
   position: absolute;
 `;
 export const Input = styled.input<{ isError: boolean }>`
-  width: 126px;
+  width: 162px;
   height: 60px;
   border: 2px solid #9fb6ee;
   border-radius: 16px;
   font-size: 16px;
-  padding: 0 20px;
-  margin-bottom: 20px;
+  text-align: center;
   font-family: 'IBM Plex Sans KR';
   font-style: normal;
   font-weight: 500;

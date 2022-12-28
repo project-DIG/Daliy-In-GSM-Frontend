@@ -23,14 +23,12 @@ export default function SignupEmailPage() {
 
   const confirmAuthenticationMail = async (email: string, code: string) => {
     try {
-      console.log(email, code);
       const res: any = await auth.emailCheck(email, code);
       setCanLogin(true);
       toast.success('인증되었습니다!', { autoClose: 2000 });
-      console.log('성공', res);
+      console.log(res);
     } catch (error: any) {
       toast.error('인증번호를 다시 확인해주세요.', { autoClose: 2000 });
-      console.log(error);
       setCanLogin(false);
     }
   };
@@ -38,7 +36,6 @@ export default function SignupEmailPage() {
   const onValid = async (data: any) => {
     try {
       setIsError(false);
-      console.log(data.email);
       setEmail(data.email);
       const res: any = await auth.getAuthenticationMail(data.email);
       toast.success('인증코드를 보냈습니다!', {
@@ -46,7 +43,6 @@ export default function SignupEmailPage() {
       });
       console.log(res);
     } catch (error: any) {
-      console.log(error.response.status);
       setCanLogin(false);
       switch (error.response.status) {
         case 400:
