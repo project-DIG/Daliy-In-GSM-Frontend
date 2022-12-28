@@ -49,7 +49,10 @@ function UserPage() {
           ) : (
             <S.FollowButton>팔로우</S.FollowButton>
           )}
-          <VideoSection isMine={response?.is_mine} />
+          <VideoSection
+            name={String(params.user_name)}
+            isMine={response?.is_mine}
+          />
         </>
       )}
     </S.UserPageLayout>

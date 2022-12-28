@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const Category = styled.div<{ isMine: boolean }>`
+export const Category = styled.div<{ isMine?: boolean }>`
   width: 88%;
   margin: auto;
   display: flex;
@@ -65,6 +65,10 @@ export const VideoSection = styled.div`
   grid-template-columns: repeat(3, 1fr);
   margin-top: 30px;
   margin-bottom: 20px;
+
+  .react-player > video {
+    width: 150%;
+  }
 `;
 
 export const VideoNotFound = styled.p`

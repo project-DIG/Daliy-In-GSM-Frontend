@@ -15,6 +15,17 @@ class User {
       return error;
     }
   }
+
+  getUserVideos(name: string, type: string) {
+    try {
+      return AxiosInstance({
+        method: 'GET',
+        url: getUser.getUserInfo() + name + type,
+      });
+    } catch (error) {
+      return error;
+    }
+  }
 }
 
 export default new User();
