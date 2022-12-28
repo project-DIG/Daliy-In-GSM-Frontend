@@ -7,6 +7,9 @@ export const getAuth = {
   confirmEmail: () => {
     return BASE_URL + 'signup/email';
   },
+  confirmAuthenticationMail: () => {
+    return BASE_URL + 'signup/email/check';
+  },
 };
 
 export const getUser = {
