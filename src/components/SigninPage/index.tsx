@@ -18,7 +18,7 @@ export default function SigninPage() {
       </S.SigninSection>
       <S.SigninBox>
         <S.EmailText>@gsm.hs.kr</S.EmailText>
-        <Input type="text" />
+        <Input type="text" email={true} />
         <Input type="password" placeholder="비밀번호" />
         <span>
           <S.SignWrap>
