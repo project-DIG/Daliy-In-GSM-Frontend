@@ -46,6 +46,20 @@ class Auth {
       return error;
     }
   }
+  signin(email: string, password: string) {
+    try {
+      return AxiosInstance({
+        method: 'Post',
+        url: getAuth.signin(),
+        data: {
+          email: email + '@gsm.hs.kr',
+          password: password,
+        },
+      });
+    } catch (error) {
+      return error;
+    }
+  }
 }
 
 export default new Auth();

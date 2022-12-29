@@ -1,10 +1,12 @@
 import * as S from './style';
 import * as I from '../../assets/svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Input from 'components/Common/Input';
 import { useForm } from 'react-hook-form';
 import { SigninInterface } from 'types/auth';
 import { useState } from 'react';
+import auth from 'api/auth';
+import { toast } from 'react-toastify';
 export default function SigninPage() {
   const {
     register,
@@ -12,11 +14,15 @@ export default function SigninPage() {
     formState: { errors },
   } = useForm<SigninInterface>();
   const [isError, setIsError] = useState(false);
+  const navigate = useNavigate();
 
   const onValid = async (data: SigninInterface) => {
     try {
+      const res: any = await auth.signin(data.email, data.password);
       setIsError(false);
-      console.log(data);
+      toast.success('로그인에 성공했습니다!', { autoClose: 2000 });
+      navigate('/');
+      console.log(res);
     } catch (error: any) {
       return error;
     }
