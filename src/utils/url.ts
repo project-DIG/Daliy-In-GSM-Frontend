@@ -13,6 +13,9 @@ export const getAuth = {
   signup: () => {
     return BASE_URL + 'signup';
   },
+  signin: () => {
+    return BASE_URL + 'signin';
+  },
 };
 
 export const getUser = {
