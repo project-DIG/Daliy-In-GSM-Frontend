@@ -5,18 +5,29 @@ import Input from 'components/Common/Input';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { SignupInterface } from 'types/auth';
+import auth from 'api/auth';
 
 export default function SignupPage() {
   const {
     register,
     handleSubmit,
+    setError,
     formState: { errors },
   } = useForm<SignupInterface>();
   const [isError, setIsError] = useState(false);
-  const onValid = (data: any) => {
-    setIsError(false);
-    console.log(data);
-    console.log('hi');
+
+  const onValid = async (data: any) => {
+    if (data.password === data.checkPassword) {
+      try {
+        setIsError(false);
+        console.log(data);
+      } catch (error: any) {
+        console.log(error);
+      }
+    } else {
+      setIsError(true);
+      setError('checkPassword', { message: '비밀번호가 일치하지 않습니다.' });
+    }
   };
   const inValid = (error: any) => {
     setIsError(true);
