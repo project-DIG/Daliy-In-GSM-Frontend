@@ -26,7 +26,7 @@ export const WelcomeBack = styled.div`
   margin-bottom: 30px;
 `;
 
-export const SigninBox = styled.div`
+export const SigninBox = styled.form`
   width: 100%;
   height: 360px;
   background-color: white;
