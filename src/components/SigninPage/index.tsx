@@ -45,6 +45,10 @@ export default function SigninPage() {
         <Input
           register={register('email', {
             required: '이메일을 입력해주세요.',
+            pattern: {
+              message: '잘못된 이메일 형식입니다.',
+              value: /^s[0-9]+$/,
+            },
             minLength: {
               value: 6,
               message: '6자를 모두 입력해 주세요',
