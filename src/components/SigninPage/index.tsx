@@ -24,7 +24,14 @@ export default function SigninPage() {
       navigate('/');
       console.log(res);
     } catch (error: any) {
-      return error;
+      switch (error.response.status) {
+        case 400:
+          toast.error('가입된 계정이 아닙니다.', { autoClose: 2000 });
+          break;
+        case 401:
+          toast.error('비밀번호가 틀렸습니다.', { autoClose: 2000 });
+          break;
+      }
     }
   };
 
