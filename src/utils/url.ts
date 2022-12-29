@@ -10,6 +10,9 @@ export const getAuth = {
   confirmAuthenticationMail: () => {
     return BASE_URL + 'signup/email/check';
   },
+  signup: () => {
+    return BASE_URL + 'signup';
+  },
 };
 
 export const getUser = {
