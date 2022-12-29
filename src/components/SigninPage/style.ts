@@ -37,11 +37,18 @@ export const SigninBox = styled.form`
   text-align: center;
   padding: 90px 0;
   span {
+    position: absolute;
+    margin-left: 76px;
+    bottom: 17%;
     width: 360px;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    margin-top: 40px;
+  }
+  button {
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    height: 0px;
   }
 `;
 
@@ -72,4 +79,18 @@ export const Signup = styled.p`
   color: #8a8a8a;
   margin-top: 70px;
   margin-left: -4px;
+`;
+
+export const ErrorMessage = styled.div`
+  margin: -16px 170px 16px 0;
+  color: #ff9090;
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 500;
+`;
+
+export const ErrorMessageLayout = styled.div`
+  width: 100%;
+  text-align: left;
+  padding-left: 76px;
 `;
