@@ -25,15 +25,9 @@ export default function SignupPage() {
   const onValid = async (data: any) => {
     if (data.password === data.checkPassword) {
       try {
-        console.log(location.email);
         setIsError(false);
-        const res: any = await auth.signup(
-          data.nickname,
-          data.password,
-          location.email,
-        );
+        await auth.signup(data.nickname, data.password, location.email);
         toast.success('회원가입에 성공하였습니다!', { autoClose: 2000 });
-        console.log(res);
       } catch (error: any) {
         console.log(error);
       }

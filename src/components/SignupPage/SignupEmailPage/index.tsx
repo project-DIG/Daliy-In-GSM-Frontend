@@ -19,15 +19,13 @@ export default function SignupEmailPage() {
     e: React.ChangeEvent<HTMLInputElement>,
   ) => {
     setAuthenticationMailInput(e.target.value);
-    console.log(authenticationMailInput);
   };
 
   const confirmAuthenticationMail = async (email: string, code: string) => {
     try {
-      const res: any = await auth.emailCheck(email, code);
+      await auth.emailCheck(email, code);
       setCanLogin(true);
       toast.success('인증되었습니다!', { autoClose: 2000 });
-      console.log(res);
     } catch (error: any) {
       toast.error('인증번호를 다시 확인해주세요.', { autoClose: 2000 });
       setCanLogin(false);
@@ -39,11 +37,10 @@ export default function SignupEmailPage() {
     try {
       setIsError(false);
       setEmail(data.email);
-      const res: any = await auth.getAuthenticationMail(data.email);
+      await auth.getAuthenticationMail(data.email);
       toast.success('인증코드를 보냈습니다!', {
         autoClose: 2000,
       });
-      console.log(res);
     } catch (error: any) {
       setCanLogin(false);
       switch (error.response.status) {
