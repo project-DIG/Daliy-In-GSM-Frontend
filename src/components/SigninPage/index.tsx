@@ -13,8 +13,13 @@ export default function SigninPage() {
   } = useForm<SigninInterface>();
   const [isError, setIsError] = useState(false);
 
-  const onValid = (data: SigninInterface) => {
-    console.log(data);
+  const onValid = async (data: SigninInterface) => {
+    try {
+      setIsError(false);
+      console.log(data);
+    } catch (error: any) {
+      return error;
+    }
   };
 
   const inValid = (error: any) => {
