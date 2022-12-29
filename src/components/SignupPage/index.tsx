@@ -81,7 +81,7 @@ export default function SignupPage() {
             register={register('password', {
               required: '비밀번호를 입력해주세요.',
               minLength: {
-                message: '영문, 숫자, 기호 포함 8~20자',
+                message: '비밀번호는 최소 8글자 입니다',
                 value: 8,
               },
               maxLength: {
@@ -89,13 +89,13 @@ export default function SignupPage() {
                 value: 20,
               },
               pattern: {
-                message: '잘못된 비밀번호 형식이에요.',
+                message: '영문, 숫자, 기호 포함 8~20자',
                 value:
                   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
               },
             })}
             type="password"
-            placeholder="비밀번호"
+            placeholder="비밀번호 (영문, 숫자, 기호 포함 8~20자)"
             isError={isError}
           />
           <S.ErrorMessage>{errors.password?.message}</S.ErrorMessage>
