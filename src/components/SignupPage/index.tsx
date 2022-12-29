@@ -1,9 +1,9 @@
 import * as S from './style';
 import * as I from '../../assets/svg';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Input from 'components/Common/Input';
 import { useForm } from 'react-hook-form';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { SignupInterface } from 'types/auth';
 import auth from 'api/auth';
 import { toast } from 'react-toastify';
@@ -15,12 +15,23 @@ interface StateType {
 export default function SignupPage() {
   const [isError, setIsError] = useState(false);
   const location = useLocation().state as StateType;
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
     setError,
     formState: { errors },
   } = useForm<SignupInterface>();
+
+  const checkCorrectAccess = () => {
+    if (!location) {
+      navigate('/signup_email');
+      toast.error('잘못된 접근입니다.', { autoClose: 2000 });
+    }
+  };
+  useEffect(() => {
+    checkCorrectAccess();
+  }, []);
 
   const onValid = async (data: any) => {
     if (data.password === data.checkPassword) {
