@@ -4,9 +4,14 @@ import { Link } from 'react-router-dom';
 import Input from 'components/Common/Input';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
+import { SignupInterface } from 'types/auth';
 
 export default function SignupPage() {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<SignupInterface>();
   const [isError, setIsError] = useState(false);
   const onValid = (data: any) => {
     setIsError(false);
@@ -41,6 +46,7 @@ export default function SignupPage() {
             placeholder="이름"
             isError={isError}
           />
+          <S.ErrorMessage>{errors.nickname?.message}</S.ErrorMessage>
           <Input
             register={register('password', {
               required: '비밀번호를 입력해주세요.',
@@ -49,6 +55,7 @@ export default function SignupPage() {
             placeholder="비밀번호"
             isError={isError}
           />
+          <S.ErrorMessage>{errors.password?.message}</S.ErrorMessage>
           <Input
             register={register('checkPassword', {
               required: '비밀번호를 확인해주세요.',
@@ -57,6 +64,7 @@ export default function SignupPage() {
             placeholder="비밀번호 확인"
             isError={isError}
           />
+          <S.ErrorMessage>{errors.checkPassword?.message}</S.ErrorMessage>
           <S.SignBox>
             <S.SignWrap>
               <S.Signup>회원가입</S.Signup>
