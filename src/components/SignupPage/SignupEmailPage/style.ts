@@ -11,6 +11,10 @@ export const SignupSection = styled.section`
   height: 80%;
   margin: auto;
 `;
+export const EmailForm = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 export const LetsStart = styled.div`
   font-family: 'Changa One';
   font-style: normal;
@@ -19,7 +23,7 @@ export const LetsStart = styled.div`
   line-height: 53px;
   color: #6c8ee5;
   margin-top: 5rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 5rem;
 `;
 
 export const EmailText = styled.p`
@@ -29,14 +33,13 @@ export const EmailText = styled.p`
   color: #7e7e7e;
   position: absolute;
 `;
-export const Input = styled.input`
-  width: 126px;
+export const Input = styled.input<{ isError: boolean }>`
+  width: 162px;
   height: 60px;
-  border: 2px solid #9fb6ee;
+  border: ${e => (e.isError ? '2px solid #FF9090' : '2px solid #9fb6ee')};
   border-radius: 16px;
   font-size: 16px;
-  padding: 0 20px;
-  margin-bottom: 20px;
+  text-align: center;
   font-family: 'IBM Plex Sans KR';
   font-style: normal;
   font-weight: 500;
@@ -84,18 +87,10 @@ export const AuthenticationBox = styled.div`
 
 export const SignBox = styled.div`
   position: absolute;
-  bottom: 11%;
-  width: 360px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  button {
-    cursor: pointer;
-    border: 0;
-    background-color: white;
-    height: 0px;
-  }
+  bottom: 13.83%;
+  right: 70px;
 `;
+
 export const SignWrap = styled.div`
   display: flex;
   flex-direction: column;
@@ -105,21 +100,34 @@ export const SignWrap = styled.div`
   font-weight: 700;
 `;
 
-export const Signup = styled.p`
-  font-size: 26px;
-  letter-spacing: -0.1em;
-`;
-export const Signin = styled.p`
-  font-size: 15px;
-  color: #8a8a8a;
-  margin-top: 60px;
-  margin-left: 2px;
+export const EmailBox = styled.form`
+  display: flex;
 `;
 
-export const ErrorMessage = styled.div`
-  margin: -16px 0 20px 4px;
-  color: #ff9090;
+export const EmailButton = styled.button`
+  cursor: pointer;
+  width: 170px;
+  height: 64px;
+  border-radius: 16px;
+  background-color: #9fb6ee;
+  outline: 2px Solid #7e9ce8;
+  border: none;
+  color: white;
   font-family: 'IBM Plex Sans KR';
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
+  font-size: 17px;
+  margin-left: 20px;
+  &:hover {
+    background-color: white;
+    color: #7e9ce8;
+    transition: 0.3s;
+    transform: translateY(-4px);
+    box-shadow: 0 4px 0 #7e9ce8;
+  }
+  &:active {
+    transition: 0s;
+    transform: translateY(0);
+    box-shadow: inset 0 2px 2px #7e9ce8;
+  }
 `;

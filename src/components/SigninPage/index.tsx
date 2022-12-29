@@ -18,12 +18,12 @@ export default function SigninPage() {
       </S.SigninSection>
       <S.SigninBox>
         <S.EmailText>@gsm.hs.kr</S.EmailText>
-        <Input type="text" />
+        <Input type="text" email={true} />
         <Input type="password" placeholder="비밀번호" />
         <span>
           <S.SignWrap>
             <S.Signin>로그인</S.Signin>
-            <Link to="/signup">
+            <Link to="/signup_email">
               <S.Signup>회원가입</S.Signup>
             </Link>
           </S.SignWrap>

@@ -5,4 +5,5 @@ export { DisLike } from './DisLike';
 export { User } from './User';
 export { EditProfile } from './EditProfile';
 export { Back } from './Back';
+export { CantLogin } from './CantLogin';
 export { LoginButton } from './LoginButton';
