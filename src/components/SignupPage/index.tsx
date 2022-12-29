@@ -61,6 +61,19 @@ export default function SignupPage() {
           <Input
             register={register('password', {
               required: '비밀번호를 입력해주세요.',
+              minLength: {
+                message: '영문, 숫자, 기호 포함 8~20자',
+                value: 8,
+              },
+              maxLength: {
+                message: '비밀번호는 최대 20자 입니다.',
+                value: 20,
+              },
+              pattern: {
+                message: '잘못된 비밀번호 형식이에요.',
+                value:
+                  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+              },
             })}
             type="password"
             placeholder="비밀번호"
@@ -70,6 +83,11 @@ export default function SignupPage() {
           <Input
             register={register('checkPassword', {
               required: '비밀번호를 확인해주세요.',
+              pattern: {
+                message: '비밀번호를 다시 확인해주세요',
+                value:
+                  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+              },
             })}
             type="password"
             placeholder="비밀번호 확인"
