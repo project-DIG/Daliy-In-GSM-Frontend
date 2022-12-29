@@ -38,6 +38,7 @@ export default function SignupPage() {
       try {
         setIsError(false);
         await auth.signup(data.nickname, data.password, location.email);
+        navigate('/signin');
         toast.success('회원가입에 성공하였습니다!', { autoClose: 2000 });
       } catch (error: any) {
         console.log(error);
