@@ -1,26 +1,39 @@
 import * as S from './style';
 import * as I from '../../assets/svg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Input from 'components/Common/Input';
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { SignupInterface } from 'types/auth';
 import auth from 'api/auth';
+import { toast } from 'react-toastify';
+
+interface StateType {
+  email: string;
+}
 
 export default function SignupPage() {
+  const [isError, setIsError] = useState(false);
+  const location = useLocation().state as StateType;
   const {
     register,
     handleSubmit,
     setError,
     formState: { errors },
   } = useForm<SignupInterface>();
-  const [isError, setIsError] = useState(false);
 
   const onValid = async (data: any) => {
     if (data.password === data.checkPassword) {
       try {
+        console.log(location.email);
         setIsError(false);
-        console.log(data);
+        const res: any = await auth.signup(
+          data.nickname,
+          data.password,
+          location.email,
+        );
+        toast.success('회원가입에 성공하였습니다!', { autoClose: 2000 });
+        console.log(res);
       } catch (error: any) {
         console.log(error);
       }

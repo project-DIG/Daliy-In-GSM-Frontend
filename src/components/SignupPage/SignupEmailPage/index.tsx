@@ -105,7 +105,7 @@ export default function SignupEmailPage() {
         </S.EmailForm>
         <S.SignBox>
           {canLogin ? (
-            <Link to="/signup">
+            <Link to="/signup" state={{ email: email }}>
               <I.LoginButton />
             </Link>
           ) : (

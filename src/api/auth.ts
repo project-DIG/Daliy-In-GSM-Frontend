@@ -30,6 +30,22 @@ class Auth {
       return error;
     }
   }
+
+  signup(name: string, password: string, email: string) {
+    try {
+      return AxiosInstance({
+        method: 'Post',
+        url: getAuth.signup(),
+        data: {
+          name: name,
+          password: password,
+          email: email + '@gsm.hs.kr',
+        },
+      });
+    } catch (error) {
+      return error;
+    }
+  }
 }
 
 export default new Auth();
