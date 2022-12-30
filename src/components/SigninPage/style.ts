@@ -23,7 +23,7 @@ export const WelcomeBack = styled.div`
   line-height: 53px;
   color: #6c8ee5;
   margin-top: 64px;
-  margin-bottom: 30px;
+  margin-bottom: 49px;
 `;
 
 export const SigninBox = styled.form`
@@ -36,11 +36,12 @@ export const SigninBox = styled.form`
   box-shadow: 0 -20px 0 #d8e6f3;
   text-align: center;
   padding: 90px 0;
+  align-items: center;
   span {
     position: absolute;
-    margin-left: 76px;
     bottom: 17%;
-    width: 360px;
+    left: 15%;
+    width: 72%;
     display: flex;
     justify-content: space-between;
   }
@@ -66,13 +67,6 @@ export const SigninBox = styled.form`
       }
     }
   }
-`;
-export const EmailText = styled.p`
-  top: 112px;
-  left: 156px;
-  font-size: 18px;
-  color: #7e7e7e;
-  position: absolute;
 `;
 
 export const SignWrap = styled.div`

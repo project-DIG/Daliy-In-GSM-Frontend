@@ -72,7 +72,6 @@ export default function SignupEmailPage() {
           Start!
         </S.LetsStart>
         <S.EmailForm>
-          <S.EmailText>@gsm.hs.kr</S.EmailText>
           <S.EmailBox onSubmit={handleSubmit(onValid, inValid)}>
             <Input
               register={register('email', {
@@ -81,6 +80,7 @@ export default function SignupEmailPage() {
               email={true}
               type="text"
               isError={isError}
+              placeholder="@gsm.hs.kr"
             />
             <S.EmailButton>인증하기</S.EmailButton>
           </S.EmailBox>

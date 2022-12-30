@@ -55,7 +55,6 @@ export default function SigninPage() {
         <p>돌아오신걸 환영해요!</p>
       </S.SigninSection>
       <S.SigninBox onSubmit={handleSubmit(onValid, inValid)}>
-        <S.EmailText>@gsm.hs.kr</S.EmailText>
         <Input
           register={register('email', {
             required: '이메일을 입력해주세요.',
@@ -71,6 +70,7 @@ export default function SigninPage() {
           type="text"
           email={true}
           isError={isError}
+          placeholder="@gsm.hs.kr"
         />
         <S.ErrorMessageLayout>
           <S.ErrorMessage>{errors.email?.message}</S.ErrorMessage>
