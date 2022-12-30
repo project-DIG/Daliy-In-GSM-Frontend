@@ -49,9 +49,24 @@ export const SigninBox = styled.form`
     border: 0;
     background-color: white;
     height: 0px;
+    &:hover {
+      & svg {
+        transition: 0.5s;
+        width: 114px;
+        height: 114px;
+        margin-top: -4px;
+        margin-right: -4px;
+      }
+    }
+    &:active {
+      & svg {
+        transition: 0ms;
+        width: 108px;
+        height: 108px;
+      }
+    }
   }
 `;
-
 export const EmailText = styled.p`
   top: 112px;
   left: 156px;
