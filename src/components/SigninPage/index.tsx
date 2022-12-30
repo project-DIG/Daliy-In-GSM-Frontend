@@ -7,6 +7,7 @@ import { SigninInterface } from 'types/auth';
 import { useState } from 'react';
 import auth from 'api/auth';
 import { toast } from 'react-toastify';
+import tokenService from 'utils/tokenService';
 export default function SigninPage() {
   const {
     register,
@@ -22,7 +23,7 @@ export default function SigninPage() {
       setIsError(false);
       toast.success('로그인에 성공했습니다!', { autoClose: 2000 });
       navigate('/');
-      console.log(res);
+      tokenService.setUser(res.data);
     } catch (error: any) {
       switch (error.response.status) {
         case 400:
