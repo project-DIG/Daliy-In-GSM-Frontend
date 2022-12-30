@@ -1,10 +1,12 @@
 import AxiosInstance from 'lib/axiosInstance';
+import { BASE_URL } from 'shared/config';
 import { getAuth } from 'utils/url';
 
 class Auth {
   getAuthenticationMail(email: string) {
     try {
       return AxiosInstance({
+        baseURL: BASE_URL.ABOUT_USER,
         method: 'Post',
         url: getAuth.confirmEmail(),
         data: {
@@ -19,6 +21,7 @@ class Auth {
   emailCheck(email: string, authenticationMail: string) {
     try {
       return AxiosInstance({
+        baseURL: BASE_URL.ABOUT_USER,
         method: 'Post',
         url: getAuth.confirmAuthenticationMail(),
         data: {
@@ -34,6 +37,7 @@ class Auth {
   signup(name: string, password: string, email: string) {
     try {
       return AxiosInstance({
+        baseURL: BASE_URL.ABOUT_USER,
         method: 'Post',
         url: getAuth.signup(),
         data: {

@@ -3,9 +3,7 @@ import { BASE_URL } from 'shared/config';
 import TokenService from 'utils/tokenService';
 import { getAuth } from 'utils/url';
 
-export const instance = axios.create({
-  baseURL: BASE_URL,
-});
+export const instance = axios.create({});
 
 instance.interceptors.request.use(
   (config: any) => {

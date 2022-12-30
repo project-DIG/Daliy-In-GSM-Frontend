@@ -1,4 +1,5 @@
 import AxiosInstance from 'lib/axiosInstance';
+import { BASE_URL } from 'shared/config';
 import { getUser } from 'utils/url';
 
 class User {
@@ -6,6 +7,7 @@ class User {
     try {
       return AxiosInstance(
         {
+          baseURL: BASE_URL.ABOUT_USER,
           method: 'GET',
           url: getUser.getUserInfo() + name,
         },
@@ -19,6 +21,7 @@ class User {
   getUserVideos(name: string, type: string) {
     try {
       return AxiosInstance({
+        baseURL: BASE_URL.ABOUT_USER,
         method: 'GET',
         url: getUser.getUserInfo() + name + type,
       });

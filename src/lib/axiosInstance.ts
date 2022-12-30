@@ -4,6 +4,7 @@ import { instance } from './interceptor';
 const AxiosInstance = (data: AxiosRequestConfig, token?: string) => {
   try {
     const request = instance({
+      baseURL: data.baseURL,
       method: data.method,
       url: data.url,
       withCredentials: false,

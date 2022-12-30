@@ -2,21 +2,21 @@ import { BASE_URL } from 'shared/config';
 
 export const getAuth = {
   tokenReissuance: () => {
-    return BASE_URL + 'signin/refresh';
+    return BASE_URL.ABOUT_USER + 'signin/refresh';
   },
   confirmEmail: () => {
-    return BASE_URL + 'signup/email';
+    return BASE_URL.ABOUT_USER + 'signup/email';
   },
   confirmAuthenticationMail: () => {
-    return BASE_URL + 'signup/email/check';
+    return BASE_URL.ABOUT_USER + 'signup/email/check';
   },
   signup: () => {
-    return BASE_URL + 'signup';
+    return BASE_URL.ABOUT_USER + 'signup';
   },
 };
 
 export const getUser = {
   getUserInfo: () => {
-    return BASE_URL + 'user/';
+    return BASE_URL.ABOUT_USER + 'user/';
   },
 };
