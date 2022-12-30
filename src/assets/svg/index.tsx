@@ -7,3 +7,6 @@ export { EditProfile } from './EditProfile';
 export { Back } from './Back';
 export { CantLogin } from './CantLogin';
 export { LoginButton } from './LoginButton';
+export { Comment } from './Comment';
+export { SoundMute } from './SoundMute';
+export { SoundOn } from './SoundOn';
