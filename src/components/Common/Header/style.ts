@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
 export const HeaderLayout = styled.div`
-  width: 86.4%;
+  width: 89%;
   height: 80px;
   align-items: center;
   margin: auto;

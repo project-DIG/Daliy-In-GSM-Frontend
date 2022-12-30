@@ -7,10 +7,11 @@ export const LayoutWrapper = styled.div`
 export const StyledLayout = styled.div`
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   height: 100vh;
   margin: auto;
   background-color: white;
+
   ::-webkit-scrollbar {
     display: none;
   }

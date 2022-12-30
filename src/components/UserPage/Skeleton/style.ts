@@ -49,7 +49,7 @@ export const UserValues = styled.div`
 `;
 
 export const FollowButton = styled.div`
-  width: 432px;
+  width: 86.4%;
   height: 40px;
   margin: auto;
   border-radius: 4px;
