@@ -6,3 +6,6 @@ export { User } from './User';
 export { EditProfile } from './EditProfile';
 export { Back } from './Back';
 export { LoginButton } from './LoginButton';
+export { Comment } from './Comment';
+export { SoundMute } from './SoundMute';
+export { SoundOn } from './SoundOn';
