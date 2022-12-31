@@ -81,7 +81,7 @@ export const AuthenticationBox = styled.div`
 export const SignBox = styled.div`
   position: absolute;
   bottom: 13.83%;
-  right: 70px;
+  right: 20%;
 `;
 
 export const SignWrap = styled.div`
