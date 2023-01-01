@@ -1,12 +1,22 @@
 import styled from '@emotion/styled';
 
 export const HeaderLayout = styled.div`
-  width: 89%;
-  height: 80px;
-  align-items: center;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 5;
+  max-width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  span {
+    width: 89%;
+    height: 80px;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 export const UserSection = styled.section`
