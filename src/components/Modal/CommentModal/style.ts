@@ -27,11 +27,12 @@ export const Modal = styled.div<{ commentModal: boolean }>`
   bottom: 0;
   width: 88%;
   max-width: 550px;
-  height: 80vh;
+  height: 70vh;
   border-radius: 10px;
   background-color: white;
   z-index: 8;
   text-align: center;
+  overflow-y: scroll;
 `;
 
 const openComment = keyframes`

@@ -37,6 +37,24 @@ export default function CommentModal() {
           </S.ProfileWrap>
           <S.Contents>안녕안녕 하세요 </S.Contents>
         </S.Comments>
+        <S.Comments>
+          <S.ProfileWrap>
+            <S.Profile />
+            <S.Name>강민제</S.Name>
+          </S.ProfileWrap>
+          <S.Contents>
+            안녕안녕 하세요 asdnfakfmsdkasfnlamdnkasmfnaskdnbajfkndsdbjaknsdbj
+          </S.Contents>
+        </S.Comments>{' '}
+        <S.Comments>
+          <S.ProfileWrap>
+            <S.Profile />
+            <S.Name>강민제</S.Name>
+          </S.ProfileWrap>
+          <S.Contents>
+            안녕안녕 하세요 asdnfakfmsdkasfnlamdnkasmfnaskdnbajfkndsdbjaknsdbj
+          </S.Contents>
+        </S.Comments>
       </S.Modal>
     </>
   );
