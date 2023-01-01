@@ -1,4 +1,4 @@
-import Layout from 'components/Layout';
+import Layout from 'components/Layout/Page';
 import { Main } from 'pages';
 import User from 'pages/User';
 import Signin from 'pages/Signin';

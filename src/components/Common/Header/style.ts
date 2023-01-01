@@ -11,7 +11,7 @@ export const HeaderLayout = styled.div`
   background-color: white;
   span {
     width: 89%;
-    height: 80px;
+    height: 60px;
     align-items: center;
     margin: auto;
     display: flex;
@@ -24,6 +24,10 @@ export const UserSection = styled.section`
   justify-content: space-between;
   align-items: center;
   gap: 14px;
+
+  & > div > svg {
+    cursor: pointer;
+  }
 `;
 
 export const ProfileImage = styled.img`
