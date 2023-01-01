@@ -26,13 +26,6 @@ export const LetsStart = styled.div`
   margin-bottom: 5rem;
 `;
 
-export const EmailText = styled.p`
-  margin-top: 20px;
-  left: 156px;
-  font-size: 18px;
-  color: #7e7e7e;
-  position: absolute;
-`;
 export const Input = styled.input<{ isError: boolean }>`
   width: 162px;
   height: 60px;
@@ -88,7 +81,7 @@ export const AuthenticationBox = styled.div`
 export const SignBox = styled.div`
   position: absolute;
   bottom: 13.83%;
-  right: 70px;
+  right: 20%;
 `;
 
 export const SignWrap = styled.div`

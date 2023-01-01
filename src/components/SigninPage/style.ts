@@ -23,10 +23,10 @@ export const WelcomeBack = styled.div`
   line-height: 53px;
   color: #6c8ee5;
   margin-top: 64px;
-  margin-bottom: 30px;
+  margin-bottom: 49px;
 `;
 
-export const SigninBox = styled.div`
+export const SigninBox = styled.form`
   width: 100%;
   height: 360px;
   background-color: white;
@@ -36,21 +36,37 @@ export const SigninBox = styled.div`
   box-shadow: 0 -20px 0 #d8e6f3;
   text-align: center;
   padding: 90px 0;
+  align-items: center;
   span {
-    width: 360px;
+    position: absolute;
+    bottom: 17%;
+    left: 15%;
+    width: 72%;
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    margin-top: 40px;
   }
-`;
-
-export const EmailText = styled.p`
-  top: 112px;
-  left: 156px;
-  font-size: 18px;
-  color: #7e7e7e;
-  position: absolute;
+  button {
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    height: 0px;
+    &:hover {
+      & svg {
+        transition: 0.5s;
+        width: 114px;
+        height: 114px;
+        margin-top: -4px;
+        margin-right: -4px;
+      }
+    }
+    &:active {
+      & svg {
+        transition: 0ms;
+        width: 108px;
+        height: 108px;
+      }
+    }
+  }
 `;
 
 export const SignWrap = styled.div`
@@ -72,4 +88,18 @@ export const Signup = styled.p`
   color: #8a8a8a;
   margin-top: 70px;
   margin-left: -4px;
+`;
+
+export const ErrorMessage = styled.div`
+  margin: -16px 170px 16px 0;
+  color: #ff9090;
+  font-family: 'IBM Plex Sans KR';
+  font-style: normal;
+  font-weight: 500;
+`;
+
+export const ErrorMessageLayout = styled.div`
+  width: 100%;
+  text-align: left;
+  padding-left: 76px;
 `;

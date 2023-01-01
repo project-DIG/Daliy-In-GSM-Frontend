@@ -85,7 +85,7 @@ export const AuthenticationBox = styled.div`
 export const SignBox = styled.div`
   position: absolute;
   bottom: 11%;
-  width: 360px;
+  width: 368px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
