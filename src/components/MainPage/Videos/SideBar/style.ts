@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 export const VideoSideBar = styled.section`
   position: absolute;
-  top: 3%;
+  top: 2.8%;
   right: 0;
   width: 17%;
   justify-content: space-between;

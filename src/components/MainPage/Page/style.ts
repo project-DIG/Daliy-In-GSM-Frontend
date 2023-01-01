@@ -33,3 +33,4 @@ export const MainBg = styled.div`
   background-color: white;
   scroll-snap-align: start;
 `;
+
