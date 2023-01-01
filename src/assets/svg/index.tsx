@@ -10,3 +10,4 @@ export { LoginButton } from './LoginButton';
 export { Comment } from './Comment';
 export { SoundMute } from './SoundMute';
 export { SoundOn } from './SoundOn';
+export { ExitModal } from './ExitModal';
