@@ -1,10 +1,11 @@
 import FollowButton from 'components/Common/FollowButton';
 import * as S from './style';
+
 interface BottomBarProps {
   title: string;
   tag: string;
-  name: string;
 }
+
 function VideoBottomBar({ ...Props }: BottomBarProps) {
   return (
     <S.BottomBar>
@@ -12,7 +13,7 @@ function VideoBottomBar({ ...Props }: BottomBarProps) {
       <S.UserInfo>
         <S.User>
           <S.Profile src="https://i.ytimg.com/vi/W4LqXqQVJ-M/maxresdefault.jpg" />
-          <S.Name>{Props.name}</S.Name>
+          <S.Name>오종진</S.Name>
         </S.User>
         <S.Button>
           <FollowButton className="mainpage-btn">팔로우</FollowButton>

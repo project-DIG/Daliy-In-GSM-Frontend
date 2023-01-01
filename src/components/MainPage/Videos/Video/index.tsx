@@ -1,7 +1,6 @@
-import React from 'react';
 import { useEffect, useRef } from 'react';
-import VideoBottomBar from '../BottomBar';
-import VideoSideBar from '../SideBar';
+import VideoBottomBar from '../Bar/BottomBar';
+import VideoSideBar from '../Bar/SideBar';
 import * as S from './style';
 
 interface VideoProps {
@@ -26,8 +25,8 @@ function Video({ ...Props }: VideoProps) {
   }, []);
 
   return (
-    <React.Fragment>
-      <S.VideoSection>
+    <S.VideoLayout>
+      <S.VideoBox>
         <S.Video
           ref={videoRef}
           className="player"
@@ -39,10 +38,10 @@ function Video({ ...Props }: VideoProps) {
           onClick={onClick}
         />
         <VideoSideBar id={Props.id} like={Props.like} dislike={Props.dislike} />
-        <VideoBottomBar title={Props.title} tag={Props.tag} name={'오종진'} />
-      </S.VideoSection>
+        <VideoBottomBar title={Props.title} tag={Props.tag} />
+      </S.VideoBox>
       <S.Line />
-    </React.Fragment>
+    </S.VideoLayout>
   );
 }
 

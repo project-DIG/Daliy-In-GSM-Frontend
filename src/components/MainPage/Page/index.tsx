@@ -1,9 +1,7 @@
 import * as S from './style';
 import Video from '../Videos/Video';
-import VideoSideBar from '../Videos/SideBar';
 import { useEffect, useState } from 'react';
 import video from 'api/video';
-import user from 'api/user';
 
 function MainPage() {
   const [response, setResponse] = useState<any[]>([]);
@@ -21,38 +19,20 @@ function MainPage() {
   }, []);
   return (
     <S.MainPageLayout>
-      <S.MainBg>
-        <S.VideoSection>
-          <Video />
-          <VideoSideBar />
-          <VideoBottomBar />
-        </S.VideoSection>
-        <S.Line />
-      </S.MainBg>
-      <S.MainBg>
-        <S.VideoSection>
-          <Video />
-          <VideoSideBar />
-          <VideoBottomBar />
-        </S.VideoSection>
-        <S.Line />
-      </S.MainBg>
-      <S.MainBg>
-        <S.VideoSection>
-          <Video />
-          <VideoSideBar />
-          <VideoBottomBar />
-        </S.VideoSection>
-        <S.Line />
-      </S.MainBg>
-      <S.MainBg>
-        <S.VideoSection>
-          <Video />
-          <VideoSideBar />
-          <VideoBottomBar />
-        </S.VideoSection>
-        <S.Line />
-      </S.MainBg>
+      <>
+        {response.map(value => (
+          <Video
+            key={value.id}
+            id={value.id}
+            title={value.title}
+            tag={value.tag}
+            like={value.like}
+            dislike={value.dislike}
+            uploader={value.uploader}
+            url={value.video_url}
+          />
+        ))}
+      </>
     </S.MainPageLayout>
   );
 }

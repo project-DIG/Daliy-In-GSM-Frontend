@@ -11,26 +11,3 @@ export const MainPageLayout = styled.div`
     display: none;
   }
 `;
-
-export const VideoSection = styled.section`
-  margin: auto;
-  position: relative;
-  width: 92%;
-  height: 87vh;
-  padding-top: 10vh;
-`;
-
-export const Line = styled.div`
-  width: 95%;
-  height: 4px;
-  background-color: #e0e0d1;
-  margin: 1.7rem auto;
-`;
-
-export const MainBg = styled.div`
-  width: 100%;
-  height: 100vh;
-  background-color: white;
-  scroll-snap-align: start;
-`;
-

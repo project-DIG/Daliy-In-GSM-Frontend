@@ -6,6 +6,7 @@ interface SideBarProps {
   like: number;
   dislike: number;
 }
+
 function VideoSideBar({ ...Props }: SideBarProps) {
   return (
     <S.VideoSideBar>
