@@ -44,9 +44,15 @@ const openComment = keyframes`
 
 export const Comment = styled.div`
   margin-top: 40px;
+  text-align: left;
+  margin-left: 10%;
   font-family: 'IBM Plex Sans KR';
-  font-weight: 400;
-  font-size: 24px;
+  font-size: 22px;
+  display: flex;
+  p {
+    margin-top: 4px;
+    margin-left: 8px;
+  }
 `;
 export const CommentInputWrap = styled.div`
   display: flex;
@@ -72,6 +78,7 @@ export const Button = styled.button`
   outline: none;
   border: 1px solid #7e9ce8;
   font-family: 'IBM Plex Sans KR';
+  color: white;
   &:hover {
     background-color: white;
     color: #7e9ce8;
@@ -84,4 +91,28 @@ export const Button = styled.button`
     transform: translateY(0);
     box-shadow: inset 0 2px 2px #7e9ce8;
   }
+`;
+
+export const Comments = styled.div`
+  width: 80%;
+  margin: 60px auto;
+`;
+export const ProfileWrap = styled.div`
+  display: flex;
+`;
+export const Profile = styled.img`
+  width: 46px;
+  height: 46px;
+  background-color: hotpink;
+  border-radius: 100px;
+  margin-right: 4px;
+`;
+export const Name = styled.div`
+  margin-top: 15px;
+`;
+export const Contents = styled.div`
+  font-family: 'IBM Plex Sans KR';
+  text-align: left;
+  margin-left: 50px;
+  word-break: break-all;
 `;
