@@ -8,15 +8,12 @@ export const StyledLayout = styled.div`
   position: relative;
   width: 100%;
   max-width: 600px;
-  height: 100vh;
   margin: auto;
   background-color: white;
-
+  height: 100vh;
   ::-webkit-scrollbar {
     display: none;
   }
-
-  overflow-y: scroll;
 `;
 
 export const BackGroundImage = styled.img`
