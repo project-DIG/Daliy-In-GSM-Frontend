@@ -43,3 +43,7 @@ export const Value = styled.p`
   font-size: 18px;
   color: white;
 `;
+
+export const CmmentWrap = styled.div`
+  cursor: pointer;
+`;
