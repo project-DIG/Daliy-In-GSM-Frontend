@@ -33,6 +33,9 @@ export const Modal = styled.div<{ commentModal: boolean }>`
   z-index: 8;
   text-align: center;
   overflow-y: scroll;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 const openComment = keyframes`
