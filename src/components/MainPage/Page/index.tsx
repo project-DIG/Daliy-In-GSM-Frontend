@@ -2,21 +2,21 @@ import * as S from './style';
 import Video from '../Videos/Video';
 import { useEffect, useState } from 'react';
 import video from 'api/video';
+import { useRecoilState } from 'recoil';
+import { createVideoModalAtom } from 'atoms';
+import CreateVideoModal from 'components/Modal/CreateVideo';
 import { commentModalAtom } from 'atoms';
 import CommentModal from 'components/CommentModal';
-import { useRecoilState } from 'recoil';
 
 function MainPage() {
   const [response, setResponse] = useState<any[]>([]);
-  const [loaded, setLoaded] = useState<boolean>(false);
   const [commentModal] = useRecoilState(commentModalAtom);
+  const [createVideoModal] = useRecoilState(createVideoModalAtom);
 
   useEffect(() => {
-    setLoaded(false);
     const getVideos = async () => {
       const res: any = await video.getVideos();
       setResponse(res.data);
-      setLoaded(true);
     };
 
     getVideos();
@@ -25,6 +25,7 @@ function MainPage() {
     <>
       {commentModal && <CommentModal />}
       <S.MainPageLayout>
+        {createVideoModal && <CreateVideoModal />}
         <>
           {response.map(value => (
             <Video

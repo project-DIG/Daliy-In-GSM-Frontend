@@ -2,17 +2,27 @@ import * as S from './style';
 import * as I from 'assets/svg';
 import tokenService from 'utils/tokenService';
 import { Link } from 'react-router-dom';
+import { useRecoilState } from 'recoil';
+import { createVideoModalAtom } from 'atoms';
 
 function Header() {
+  const [, setCreateVideoModal] = useRecoilState(createVideoModalAtom);
+
+  const onCreateVideo = () => {
+    setCreateVideoModal(true);
+  };
+
   return (
     <S.HeaderLayout>
       <span>
         <Link to={'/'}>
           <I.Logo />
         </Link>
-        {!!tokenService.getLocalAccessToken() ? (
+        {!tokenService.getLocalAccessToken() ? (
           <S.UserSection>
-            <I.AddVideo />
+            <div onClick={onCreateVideo}>
+              <I.AddVideo />
+            </div>
             <S.ProfileImage src="/images/background.png" />
           </S.UserSection>
         ) : (
