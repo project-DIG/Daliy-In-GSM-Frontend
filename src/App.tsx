@@ -8,10 +8,11 @@ import SignupEmailPage from 'components/SignupPage/SignupEmailPage';
 import Signup from 'pages/Signup';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import { RecoilRoot } from 'recoil';
 
 function App() {
   return (
-    <>
+    <RecoilRoot>
       <GlobalStyle />
       <Layout>
         <BrowserRouter>
@@ -25,7 +26,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </Layout>
-    </>
+    </RecoilRoot>
   );
 }
 
