@@ -6,7 +6,7 @@ import { useRecoilState } from 'recoil';
 import { createVideoModalAtom } from 'atoms';
 import CreateVideoModal from 'components/Modal/CreateVideo';
 import { commentModalAtom } from 'atoms';
-import CommentModal from 'components/CommentModal';
+import CommentModal from 'components/Modal/CommentModal';
 
 function MainPage() {
   const [response, setResponse] = useState<any[]>([]);

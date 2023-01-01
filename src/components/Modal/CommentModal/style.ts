@@ -25,8 +25,9 @@ export const Modal = styled.div<{ commentModal: boolean }>`
         `
       : ``};
   bottom: 0;
-  width: 460px;
-  height: 720px;
+  width: 88%;
+  max-width: 550px;
+  height: 80vh;
   border-radius: 10px;
   background-color: white;
   z-index: 8;
