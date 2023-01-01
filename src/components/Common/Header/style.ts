@@ -11,7 +11,7 @@ export const HeaderLayout = styled.div`
   background-color: white;
   span {
     width: 89%;
-    height: 80px;
+    height: 60px;
     align-items: center;
     margin: auto;
     display: flex;
