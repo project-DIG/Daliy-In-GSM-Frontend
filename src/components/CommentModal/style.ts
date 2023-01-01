@@ -100,6 +100,9 @@ export const Comments = styled.div`
 export const ProfileWrap = styled.div`
   display: flex;
 `;
+export const Close = styled.div`
+  text-align: right;
+`;
 export const Profile = styled.img`
   width: 46px;
   height: 46px;

@@ -15,6 +15,7 @@ export default function CommentModal() {
         <S.Comment>
           <I.ModalComment />
           <p>댓글</p>
+          <S.Close></S.Close>
         </S.Comment>
         <S.CommentInputWrap>
           <S.CommentInput placeholder="댓글 추가" />
