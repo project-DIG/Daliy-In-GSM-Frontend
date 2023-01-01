@@ -8,7 +8,7 @@ interface Props {
 function Layout({ children }: Props) {
   return (
     <S.LayoutWrapper>
-      <S.BackGroundImage src="/images/bg.png" />
+      <S.BackGroundImage src="/images/background.png" />
       <S.StyledLayout>{children}</S.StyledLayout>
     </S.LayoutWrapper>
   );

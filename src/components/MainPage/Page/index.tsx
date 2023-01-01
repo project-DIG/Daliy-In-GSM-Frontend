@@ -9,28 +9,44 @@ function MainPage() {
     <S.MainPageLayout>
       <FullPage>
         <Slide>
-          <S.VideoSection>
-            <Video />
-            <VideoSideBar />
-            <VideoBottomBar />
-          </S.VideoSection>
-          <S.Line />
+          <S.MainBg>
+            <S.VideoSection>
+              <Video />
+              <VideoSideBar />
+              <VideoBottomBar />
+            </S.VideoSection>
+            <S.Line />
+          </S.MainBg>
         </Slide>
         <Slide>
-          <S.VideoSection>
-            <Video />
-            <VideoSideBar />
-            <VideoBottomBar />
-          </S.VideoSection>
-          <S.Line />
+          <S.MainBg>
+            <S.VideoSection>
+              <Video />
+              <VideoSideBar />
+              <VideoBottomBar />
+            </S.VideoSection>
+            <S.Line />
+          </S.MainBg>
         </Slide>
         <Slide>
-          <S.VideoSection>
-            <Video />
-            <VideoSideBar />
-            <VideoBottomBar />
-          </S.VideoSection>
-          <S.Line />
+          <S.MainBg>
+            <S.VideoSection>
+              <Video />
+              <VideoSideBar />
+              <VideoBottomBar />
+            </S.VideoSection>
+            <S.Line />
+          </S.MainBg>
+        </Slide>
+        <Slide>
+          <S.MainBg>
+            <S.VideoSection>
+              <Video />
+              <VideoSideBar />
+              <VideoBottomBar />
+            </S.VideoSection>
+            <S.Line />
+          </S.MainBg>
         </Slide>
       </FullPage>
     </S.MainPageLayout>
