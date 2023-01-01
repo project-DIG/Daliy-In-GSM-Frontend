@@ -6,8 +6,11 @@ import { useRecoilState } from 'recoil';
 import { createVideoModalAtom } from 'atoms';
 
 function Header() {
-  const [createVideoModal, setCreateVideoModal] =
-    useRecoilState(createVideoModalAtom);
+  const [, setCreateVideoModal] = useRecoilState(createVideoModalAtom);
+
+  const onCreateVideo = () => {
+    setCreateVideoModal(true);
+  };
 
   return (
     <S.HeaderLayout>
@@ -17,7 +20,9 @@ function Header() {
         </Link>
         {!tokenService.getLocalAccessToken() ? (
           <S.UserSection>
-            <I.AddVideo />
+            <div onClick={onCreateVideo}>
+              <I.AddVideo />
+            </div>
             <S.ProfileImage src="/images/background.png" />
           </S.UserSection>
         ) : (

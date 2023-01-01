@@ -24,6 +24,10 @@ export const UserSection = styled.section`
   justify-content: space-between;
   align-items: center;
   gap: 14px;
+
+  & > div > svg {
+    cursor: pointer;
+  }
 `;
 
 export const ProfileImage = styled.img`
