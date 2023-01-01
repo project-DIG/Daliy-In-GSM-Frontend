@@ -1,7 +1,12 @@
 import * as S from './style';
 import * as I from 'assets/svg';
 
-function VideoSideBar() {
+interface SideBarProps {
+  id: number;
+  like: number;
+  dislike: number;
+}
+function VideoSideBar({ ...Props }: SideBarProps) {
   return (
     <S.VideoSideBar>
       <S.Sound className="sound-control">
@@ -10,11 +15,11 @@ function VideoSideBar() {
       <S.Interaction>
         <S.SvgBox>
           <I.Like />
-          <S.Value>120</S.Value>
+          <S.Value>{Props.like}</S.Value>
         </S.SvgBox>
         <S.SvgBox>
           <I.DisLike />
-          <S.Value>1223</S.Value>
+          <S.Value>{Props.dislike}</S.Value>
         </S.SvgBox>
         <S.SvgBox>
           <I.Comment />
