@@ -9,7 +9,7 @@ import { useRecoilState } from 'recoil';
 function MainPage() {
   const [response, setResponse] = useState<any[]>([]);
   const [loaded, setLoaded] = useState<boolean>(false);
-  const [commentModal, setCommentModal] = useRecoilState(commentModalAtom);
+  const [commentModal] = useRecoilState(commentModalAtom);
 
   useEffect(() => {
     setLoaded(false);
