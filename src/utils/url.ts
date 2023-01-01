@@ -20,3 +20,9 @@ export const getUser = {
     return BASE_URL.ABOUT_USER + 'user/';
   },
 };
+
+export const getVideo = {
+  getVideos: () => {
+    return BASE_URL.ABOUT_VIDEO + 'api/';
+  },
+};
