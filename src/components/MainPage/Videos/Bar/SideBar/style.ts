@@ -2,11 +2,11 @@ import styled from '@emotion/styled';
 
 export const VideoSideBar = styled.section`
   position: absolute;
-  top: 2.8%;
+  top: 12vh;
   right: 0;
   width: 17%;
   justify-content: space-between;
-  height: 58vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   text-align: center;

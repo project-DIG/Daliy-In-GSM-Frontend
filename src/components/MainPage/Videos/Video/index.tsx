@@ -16,17 +16,22 @@ interface VideoProps {
 function Video({ ...Props }: VideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
+  useEffect(() => {
+    console.log(videoRef.current);
+  }, []);
+
   return (
     <S.VideoLayout>
       <S.VideoBox>
         <S.Video
+          id="scrollArea"
           ref={videoRef}
           className="player"
           src={Props.url}
           width="100%"
           height="100%"
-          muted={false}
-          controls={false}
+          muted={true} // 자동 재생 on
+          controls={false} // 플레이어 컨트롤 노출 여부
         />
         <VideoSideBar id={Props.id} like={Props.like} dislike={Props.dislike} />
         <VideoBottomBar title={Props.title} tag={Props.tag} />

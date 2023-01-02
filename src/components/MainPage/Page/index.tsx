@@ -7,6 +7,7 @@ import { createVideoModalAtom } from 'atoms';
 import CreateVideoModal from 'components/Modal/CreateVideo';
 import { commentModalAtom } from 'atoms';
 import CommentModal from 'components/Modal/CommentModal';
+import React from 'react';
 
 function MainPage() {
   const observerTargetEl = useRef<HTMLDivElement>(null);
@@ -24,8 +25,6 @@ function MainPage() {
       setResponse(prevPosts => [...prevPosts, ...res.data.results]);
       setHasNextPage(res.data.results.length === 5);
       setIsLoad(false);
-      console.log(page.current);
-      console.log(res.data);
 
       if (res.data.results.length) {
         page.current += 1;
@@ -50,24 +49,22 @@ function MainPage() {
 
   return (
     <>
-      {commentModal && <CommentModal />}
       <S.MainPageLayout>
+        {commentModal && <CommentModal />}
         {createVideoModal && <CreateVideoModal />}
-        <>
-          {response.map(value => (
-            <Video
-              key={value.id}
-              id={value.id}
-              title={value.title}
-              tag={value.tag}
-              like={value.like}
-              dislike={value.dislike}
-              uploader={value.uploader}
-              url={value.video_url}
-            />
-          ))}
-          <div ref={observerTargetEl} />
-        </>
+        {response.map(value => (
+          <Video
+            key={value.id}
+            id={value.id}
+            title={value.title}
+            tag={value.tag}
+            like={value.like}
+            dislike={value.dislike}
+            uploader={value.uploader}
+            url={value.video_url}
+          />
+        ))}
+        <div ref={observerTargetEl} />
       </S.MainPageLayout>
     </>
   );

@@ -12,7 +12,7 @@ export const VideoBox = styled.section`
   position: relative;
   width: 92%;
   height: 87vh;
-  padding-top: 10vh;
+  padding-top: 9.2vh;
 `;
 
 export const Video = styled.video`
@@ -24,5 +24,5 @@ export const Line = styled.div`
   width: 95%;
   height: 4px;
   background-color: #e0e0d1;
-  margin: 1.7rem auto;
+  margin: 1.3rem auto;
 `;
