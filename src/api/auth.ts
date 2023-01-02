@@ -53,6 +53,7 @@ class Auth {
   signin(email: string, password: string) {
     try {
       return AxiosInstance({
+        baseURL: BASE_URL.ABOUT_USER,
         method: 'Post',
         url: getAuth.signin(),
         data: {

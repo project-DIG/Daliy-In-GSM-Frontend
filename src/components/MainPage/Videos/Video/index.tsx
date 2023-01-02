@@ -16,14 +16,6 @@ interface VideoProps {
 function Video({ ...Props }: VideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  const onClick = () => {
-    videoRef.current?.play();
-  };
-
-  useEffect(() => {
-    videoRef.current?.play();
-  }, []);
-
   return (
     <S.VideoLayout>
       <S.VideoBox>
@@ -35,7 +27,6 @@ function Video({ ...Props }: VideoProps) {
           height="100%"
           muted={false}
           controls={false}
-          onClick={onClick}
         />
         <VideoSideBar id={Props.id} like={Props.like} dislike={Props.dislike} />
         <VideoBottomBar title={Props.title} tag={Props.tag} />

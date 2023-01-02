@@ -3,17 +3,17 @@ import { TokenInterface } from 'types/token';
 class TokenService {
   getLocalRefreshToken() {
     const user = JSON.parse(localStorage.getItem('token') || '{}');
-    return user?.refreshToken;
+    return user?.refresh_token;
   }
 
   getLocalAccessToken() {
     const user = JSON.parse(localStorage.getItem('token') || '{}');
-    return user?.accessToken;
+    return user?.access_token;
   }
 
   updateLocalAccessToken(token: string) {
     let user = JSON.parse(localStorage.getItem('token') || '{}');
-    user.accessToken = token;
+    user.access_token = token;
     localStorage.setItem('token', JSON.stringify(user));
   }
 

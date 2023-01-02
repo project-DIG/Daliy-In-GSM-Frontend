@@ -7,6 +7,7 @@ export const MainPageLayout = styled.div`
   grid-template-columns: repeat(1, 1fr);
   overflow: auto;
   scroll-snap-type: y mandatory;
+
   ::-webkit-scrollbar {
     display: none;
   }
